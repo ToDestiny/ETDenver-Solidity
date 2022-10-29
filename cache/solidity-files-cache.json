@@ -217,8 +217,8 @@
       ]
     },
     "/Users/todestiny/WORKFLOW/ETHDenver-Solidity/contracts/ethdenver_lessons/D8/VulcanoCoin.sol": {
-      "lastModificationDate": 1667060767689,
-      "contentHash": "b9b95ea79b6bf71211f35246a7caf67a",
+      "lastModificationDate": 1667062425612,
+      "contentHash": "d099ee72fbe20363b9fbca892c65d6c3",
       "sourceName": "contracts/ethdenver_lessons/D8/VulcanoCoin.sol",
       "solcConfig": {
         "version": "0.8.9",

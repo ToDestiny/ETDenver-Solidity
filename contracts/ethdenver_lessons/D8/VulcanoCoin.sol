@@ -23,13 +23,15 @@ contract VulcanoCoin is Ownable {
     mapping(address => Payment[]) payments;
 
     constructor() {
-        balances[msg.sender] = TOTAL_SUPPLY;
+			owner() == msg.sender;
+      balances[msg.sender] = TOTAL_SUPPLY;
     }
 
     /**
     *@dev Increase the total supply of tokens
     */
     function increaseTotalSupply() public onlyOwner {
+			require(owner() == msg.sender, "Ownable: caller is not the owner");
         TOTAL_SUPPLY += 1000;
         emit eventTotalSupplyChanged("New Total Supply = " , TOTAL_SUPPLY);
     }
