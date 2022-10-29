@@ -217,8 +217,8 @@
       ]
     },
     "/Users/todestiny/WORKFLOW/ETHDenver-Solidity/contracts/ethdenver_lessons/D8/VulcanoCoin.sol": {
-      "lastModificationDate": 1667058151803,
-      "contentHash": "c94cbe89f10b67fe50bc0ae8a4af71f9",
+      "lastModificationDate": 1667060767689,
+      "contentHash": "b9b95ea79b6bf71211f35246a7caf67a",
       "sourceName": "contracts/ethdenver_lessons/D8/VulcanoCoin.sol",
       "solcConfig": {
         "version": "0.8.9",
@@ -244,13 +244,49 @@
         }
       },
       "imports": [
-        "@openzeppelin/contracts/access/Ownable.sol"
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "hardhat/console.sol"
       ],
       "versionPragmas": [
         "^0.8.0"
       ],
       "artifacts": [
-        "VolcanoCoin"
+        "VulcanoCoin"
+      ]
+    },
+    "/Users/todestiny/WORKFLOW/ETHDenver-Solidity/node_modules/hardhat/console.sol": {
+      "lastModificationDate": 1667058027022,
+      "contentHash": "4ff3cd2f6272c9a6516e9ee4f2b967d3",
+      "sourceName": "hardhat/console.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">= 0.4.22 <0.9.0"
+      ],
+      "artifacts": [
+        "console"
       ]
     }
   }

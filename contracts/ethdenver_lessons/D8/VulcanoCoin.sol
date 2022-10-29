@@ -2,13 +2,14 @@
 pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
+import "hardhat/console.sol";
 
     /**
     *@title VulcanoCoin
     *@dev   Smart contract for the VulcanoCoin
     */
 
-contract VolcanoCoin is Ownable {
+contract VulcanoCoin is Ownable {
     uint256 public TOTAL_SUPPLY = 10000;
     event eventTotalSupplyChanged(string, uint256);
     event eventTransfer(string, uint256);
@@ -31,6 +32,10 @@ contract VolcanoCoin is Ownable {
     function increaseTotalSupply() public onlyOwner {
         TOTAL_SUPPLY += 1000;
         emit eventTotalSupplyChanged("New Total Supply = " , TOTAL_SUPPLY);
+    }
+
+    function getTotalSupply() public view returns(uint) {
+        return TOTAL_SUPPLY;
     }
 
     function getUserBalance(address _user) public view returns(uint) {
