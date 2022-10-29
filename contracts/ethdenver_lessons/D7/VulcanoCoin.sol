@@ -1,7 +1,7 @@
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.7.3/contracts/access/Ownable.sol";
-
 // SPDX-License-Identifier: UNLICENSED 
 pragma solidity ^0.8.0;
+
+import "@openzeppelin/contracts/access/Ownable.sol";
 
     /**
     *@title VulcanoCoin
