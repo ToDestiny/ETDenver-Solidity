@@ -29,8 +29,8 @@ describe('VulcanoCoin Smart Contract', function () {
   it('Should be reverted because not the Owner', async function () {
     const { vulcanoCoin, addr1 } = await loadFixture(deployTokenFixture);
 
-    expect(
-      await vulcanoCoin.connect(addr1).increaseTotalSupply()
+    await expect(
+      vulcanoCoin.connect(addr1).increaseTotalSupply()
     ).to.be.revertedWith('Ownable: caller is not the owner');
   });
 });
