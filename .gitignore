@@ -1,5 +1,6 @@
 .DS_Store
 .deps
-/contracts/artifacts
+/contracts/artifacts/build-info
 /node_modules
 /cache
+/artifacts
