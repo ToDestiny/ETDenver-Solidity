@@ -11,12 +11,12 @@ contract VolcanoNFT is ERC721 {
 
 	constructor() ERC721("VolcanoNFT", "VNFT") {}
 
-	    function mintVolcanoNFT(address player)
+	    function mintVolcanoNFT(address user)
         public
         returns (uint256)
     {
         uint256 newItemId = _tokenIds.current();
-        _mint(player, newItemId);
+        _mint(user, newItemId);
 
         _tokenIds.increment();
         return newItemId;

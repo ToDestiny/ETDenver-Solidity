@@ -584,8 +584,8 @@
       ]
     },
     "/Users/todestiny/WORKFLOW/ETHDenver-Solidity/contracts/ethdenver_lessons/D9/VolcanoNFT.sol": {
-      "lastModificationDate": 1667247848065,
-      "contentHash": "b032070abf47ce111b2ee6a699d6e8a2",
+      "lastModificationDate": 1667333194742,
+      "contentHash": "9a39784781c7a603207d37e16758bd9e",
       "sourceName": "contracts/ethdenver_lessons/D9/VolcanoNFT.sol",
       "solcConfig": {
         "version": "0.8.9",
