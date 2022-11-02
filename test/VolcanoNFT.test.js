@@ -29,7 +29,11 @@ describe('VolcanoNFT Smart Contract', function () {
     console.log(owner.address);
     console.log(addr1.address);
     await volcanoNFT.mintVolcanoNFT(owner.address);
-    await volcanoNFT.transferFrom(owner.address, addr1.address, 0);
+    await volcanoNFT['safeTransferFrom(address,address,uint256)'](
+      owner.address,
+      addr1.address,
+      0
+    );
     expect(await volcanoNFT.balanceOf(addr1)).to.equal('1');
   });
 });
