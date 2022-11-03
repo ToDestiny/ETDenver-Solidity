@@ -34,6 +34,6 @@ describe('VolcanoNFT Smart Contract', function () {
       addr1.address,
       0
     );
-    expect(await volcanoNFT.balanceOf(addr1)).to.equal('1');
+    expect(await volcanoNFT.balanceOf(addr1.address)).to.equal('1');
   });
 });
