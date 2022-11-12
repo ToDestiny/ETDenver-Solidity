@@ -22,19 +22,19 @@ contract VolcanoNFT is ERC721, ERC721URIStorage, Ownable {
         volcanoCoin = _volcanoCoin;
     }
 
-    function mint() public payable returns(uint256) {
+    function safeMint(address to) public payable onlyOwner {
+        string memory uri = "ipfs://bafkreiel4yqzitegaia2ba73sr7j2bjrx4ciawslhbtu6srvcz7tql2cxu";
+        require (msg.value > 0, "Mint price is either 0.001 ETH or 1 VCN.");
         if (msg.value < ETH_MINT_PRICE) {
             require(
                 volcanoCoin.transferFrom(msg.sender, address(this), VOLCANOCOIN_MINT_PRICE),
                 "Mint price is either 0.001 ETH or 1 VCN."
             );
         }
-
-        _tokenIdCounter.increment();
         uint256 tokenId = _tokenIdCounter.current();
-        _safeMint(msg.sender, tokenId);
-
-        return tokenId;
+        _tokenIdCounter.increment();
+        _safeMint(to, tokenId);
+        _setTokenURI(tokenId, uri);
     }
 
     // The following functions are overrides required by Solidity.
