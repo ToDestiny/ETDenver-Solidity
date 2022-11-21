@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/ToDestiny/ETHDenver-Solidity#readme",
   "dependencies": {
-    "@openzeppelin/contracts": "^4.7.3"
+    "@openzeppelin/contracts": "^4.7.3",
+    "@uniswap/v3-periphery": "^1.4.3",
+    "dotenv": "^16.0.3"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-network-helpers": "^1.0.6",
