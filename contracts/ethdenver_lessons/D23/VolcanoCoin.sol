@@ -58,7 +58,7 @@ contract VulcanoCoin is Ownable, Pausable {
 	function manipulateString(string memory _input) public returns(string memory) {
 		require(_input, "It shouldnt be null!");
 		string memory _input2 = " from ETH Denver.";
-		var ret = _input.toSlice().concat(_input2.toSlice());
+		string memory ret = _input.toSlice().concat(_input2.toSlice());
 		return ret;
 	}
 
